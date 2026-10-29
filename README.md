@@ -33,3 +33,4 @@
  - REST API built with Express
 
 ### What has already been accomplished
+ - Draft design of UI
