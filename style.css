@@ -24,3 +24,15 @@ nav h1{
 h1 span{
   color: #f90706;
 }
+
+.link{
+  font-size: 36px;
+
+}
+
+.read{
+  color: #5b2333;
+}
+.delete{
+  color: #f90706;
+}
