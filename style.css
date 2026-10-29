@@ -118,6 +118,11 @@ h1 span{
   padding: 20px
 }
 
+.table.container table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
 footer{
   width: 100%;
   display: flex;
