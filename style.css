@@ -26,7 +26,7 @@ nav h1{
   margin: 0 auto 0 0;
 }
 
-nav h1, link.container{
+nav h1, .link.container{
   margin-top: 20px;
 }
 
