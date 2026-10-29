@@ -107,6 +107,13 @@ h1 span{
   font-size: 21px;
 }
 
+.table.container{
+  width: 900px;
+  height: 290px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
 footer{
   width: 100%;
   display: flex;
