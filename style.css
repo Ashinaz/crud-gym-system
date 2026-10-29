@@ -3,3 +3,13 @@ body{
   margin: 0;
   font-family: sans-serif;
 }
+
+nav h1{
+  color: #5b2333;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h1 span{
+  color: #f90706;
+}
