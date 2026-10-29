@@ -1,7 +1,7 @@
 # Gym Membership System CRUD Fullstack
 
 ## How to setup repo
- - use npm ci after cloning repo
+ - use 'npm ci' after cloning repo
 
 ## Goal
  - Create a full-stack web system
@@ -33,4 +33,6 @@
  - REST API built with Express
 
 ### What has already been accomplished
- - Draft design of UI
+ - Draft design of UI (Finished on 10/27/26)
+ - Created Github repo for collaboration and version control (Finished on 10/29/26)
+ - Initial Front end UI (Finished on 10/29/26)
