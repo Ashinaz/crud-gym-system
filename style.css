@@ -66,3 +66,12 @@ h1 span{
   display: flex;
   flex-direction: column;
 }
+
+.input.section input{
+  border-radius: 15px;
+  width: 669px;
+  height: 56px;
+  padding: 10px 10px 10px 20px;
+  font-size: 24px;
+  font-weight: 400;
+}
