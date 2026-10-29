@@ -45,7 +45,7 @@ h1 span{
   color: #f90706;
 }
 
-.input-container{
+.input.container{
   width: 773px;
   height: 467px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
