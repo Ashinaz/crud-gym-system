@@ -8,6 +8,11 @@ nav{
   height: 95px;
   width: 100%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 10px 0 10px;
+  display:flex;
+
 }
 
 nav h1{
