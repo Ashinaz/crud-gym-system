@@ -103,7 +103,8 @@ h1 span{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  gap: 10px;
+  font-size: 21px;
 }
 
 footer{
