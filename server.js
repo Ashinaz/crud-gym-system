@@ -26,3 +26,5 @@ const membershipSchema = new mongoose.Schema({
 })
 
 const member = mongoose.model("Member", memberSchema)
+
+const membership = mongoose.model("Member", membershipSchema)
