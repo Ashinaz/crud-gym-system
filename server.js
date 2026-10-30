@@ -65,3 +65,16 @@ app.post("/members", async (req, res) => {
     res.status(400).json({error: err.message})
   }
 })
+
+app.post("/memberships", async (req, res) => {
+  try{
+    const newMembership = new Membership({
+      rate: req.body.rate,
+      duration: req.body.duration,
+    })
+    const saved = await newMembership.save()
+    res.status(201).json(saved)
+  }catch (err) {
+    res.status(400).json({error: err.message})
+  }
+})
