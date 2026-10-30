@@ -111,3 +111,8 @@ app.delete("members/:id", async (req, res) => {
   const deleted = await findByIdAndDelete(req.params.id)
   res.json(deleted)
 })
+
+app.delete("memberships/:id", async (req, res) => {
+  const deleted = await findByIdAndDelete(req.params.id)
+  res.json(deleted)
+})
