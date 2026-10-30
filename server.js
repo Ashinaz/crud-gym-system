@@ -28,3 +28,8 @@ const membershipSchema = new mongoose.Schema({
 const member = mongoose.model("Member", memberSchema)
 
 const membership = mongoose.model("Member", membershipSchema)
+
+app.get("/members", async (req, res) => {
+  const members = await member.find()
+  res.json(members)
+})
