@@ -39,7 +39,7 @@ app.get("/memberships", async (req, res) => {
   res.json(memberships)
 })
 
-app.get("/members/:id", async (req, res) => {
+app.get("/member/:id", async (req, res) => {
   const member = await Member.findById(req.params.id)
   res.json(member)
 })
