@@ -78,3 +78,19 @@ app.post("/memberships", async (req, res) => {
     res.status(400).json({error: err.message})
   }
 })
+
+app.put("/members/:id", async (req, res) => {
+  const updated = await Member.findByIdAndUpdate(
+    req.params.id, 
+    {
+      name: req.body.name,
+      membership: req.body.membership,
+      attendance: req.body.attendance,
+      active: req.body.active,
+      createdAt: req.body.createdAt,
+      expireAt: req.body.expireAt,
+    },
+    { new: true }
+  )
+  res.json(updated)
+})
