@@ -94,3 +94,15 @@ app.put("/members/:id", async (req, res) => {
   )
   res.json(updated)
 })
+
+app.put("/memberships/:id", async (req, res) => {
+  const updated = await Membership.findByIdAndUpdate(
+    req.params.id, 
+    {
+      rate: req.body.rate,
+      duration: req.body.duration,
+    },
+    { new: true }
+  )
+  res.json(updated)
+})
