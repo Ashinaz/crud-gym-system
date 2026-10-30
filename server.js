@@ -24,3 +24,5 @@ const membershipSchema = new mongoose.Schema({
   rate: Number,
   duration: Number,
 })
+
+const member = mongoose.model("Member", memberSchema)
