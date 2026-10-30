@@ -33,3 +33,8 @@ app.get("/members", async (req, res) => {
   const members = await member.find()
   res.json(members)
 })
+
+app.get("/memberships", async (req, res) => {
+  const memberships = await membership.find()
+  res.json(memberships)
+})
