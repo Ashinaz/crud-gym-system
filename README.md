@@ -27,11 +27,13 @@
 
 ### What needs to be done
  - CRUD (Frontend to Backend interaction)
+ - Search/Filter
+
 
 ### What has already been accomplished
  - Draft web design (Finished on 10/27/26)
  - Created Github repo for collaboration and version control (Finished on 10/29/26)
- - Initial Front end UI (Finished on 10/29/26)
+ - Initial Web Design (Finished on 10/29/26)
  - Update Web Design (Finished on 10/30/26)
  - Use JS to fetch (Finished on 10/30/26)
  - Use MongoDB to store data (Finished on 10/30/26)
