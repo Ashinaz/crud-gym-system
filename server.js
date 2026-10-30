@@ -106,3 +106,8 @@ app.put("/memberships/:id", async (req, res) => {
   )
   res.json(updated)
 })
+
+app.delete("members/:id", async (req, res) => {
+  const deleted = await findByIdAndDelete(req.params.id)
+  res.json(deleted)
+})
