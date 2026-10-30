@@ -48,3 +48,20 @@ app.get("/membership/:id", async (req, res) => {
   const membership = await Membership.findById(req.params.id)
   res.json(membership)
 })
+
+app.post("/members", async (req, res) => {
+  try{
+    const newMember = new Member({
+      name: req.body.name,
+      membership: req.body.membership,
+      attendance: req.body.attendance,
+      active: req.body.active,
+      createdAt: req.body.createdAt,
+      expireAt: req.body.expireAt,
+    })
+    const saved = await newMember.save()
+    res.status(201).json(saved)
+  }catch (err) {
+    res.status(400).json({error: err.message})
+  }
+})
