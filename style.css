@@ -93,20 +93,49 @@ h1 span{
 }
 
 .status.container{
-  width: 300px;
-  height: 180px;
+  width: 580px;
+  height: 250px;
+  padding: 20px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
-  background-color: #5b2333;
+  border-radius: 13px;
+  background-color: #ec205a;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   font-size: 21px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
+.stat-text.container{
+  display: flex;
+}
+
+.stat-text.container .status{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status.container .title{
+  padding: 0 10px 10px 15px;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.status.container .number{
+  font-size: 60px;
+  font-weight: 600;
+  padding: 3px
+}
+
+.status.container .text{
+  font-size: 19px
+}
 .table.container{
   width: 900px;
   height: 290px;
