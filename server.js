@@ -38,3 +38,8 @@ app.get("/memberships", async (req, res) => {
   const memberships = await Membership.find()
   res.json(memberships)
 })
+
+app.get("/members/:id", async (req, res) => {
+  const member = await Member.findById(req.params.id)
+  res.json(member)
+})
