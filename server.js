@@ -43,3 +43,8 @@ app.get("/member/:id", async (req, res) => {
   const member = await Member.findById(req.params.id)
   res.json(member)
 })
+
+app.get("/membership/:id", async (req, res) => {
+  const membership = await Membership.findById(req.params.id)
+  res.json(membership)
+})
