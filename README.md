@@ -1,7 +1,10 @@
 # Gym Membership System CRUD Fullstack
 
 ## How to setup repo
- - use 'npm ci' after cloning repo
+ - use after cloning repo:
+    - npm ci
+    - npm install
+    - npm start (to start server)
 
 ## Goal
  - Create a full-stack web system
@@ -27,7 +30,7 @@
 
 ### What needs to be done
  - CRUD (Frontend to Backend interaction)
- - Search/Filter
+ - Search/Filter Functionality and Design
 
 
 ### What has already been accomplished
