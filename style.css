@@ -1,7 +1,7 @@
 body{
   display:flex;
   margin: 0;
-  font-family: Roboto, sans-serif;
+  font-family: inter;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -17,12 +17,13 @@ nav{
   margin: 0;
   padding: 10px 20px 10px 20px;
   display:flex;
+  background-color: #ffffff;
 }
 
 nav h1{
-  color: #5b2333;
+  color: #ce2c5a;
   font-size: 29px;
-  font-weight: 700;
+  font-weight: 500;
   margin: 0 auto 0 0;
 }
 
@@ -39,56 +40,60 @@ h1 span{
 }
 
 .read{
-  color: #5b2333;
+  color: #ce2c5a;
 }
 .delete{
   color: #f90706;
 }
 
 .input.container{
-  width: 560px;
-  height: 450px;
+  width: 400px;
+  height: 340px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 10px;
   border-radius: 12px;
-  padding: 27px 52px 27px 52px;
+  padding: 27px 72px 27px 32px;
+  background-color: white;
 }
 
 .input.container h1{
-  font-size: 36px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 400;
   margin: 0;
 }
 
 .input.section{
   display: flex;
   flex-direction: column;
+  color: gray;
 }
 
 .input.section input{
-  border-radius: 15px;
-  width: 450px;
-  height: 56px;
-  padding: 10px 10px 10px 20px;
-  font-size: 24px;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  width: 100%;
+  height: 16px;
+  padding: 10px 10px 10px 10px;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .input.section label{
-  font-size: 27px;
+  font-size: 22px;
   padding: 10px
 }
 
 .input.buttons button{
-  background-color: #5b2333;
-  border-radius: 15px;
-  width: 84px;
-  height: 49px;
-  font-size: 24px;
-  font-weight: 500;
+  background-color: #ec205a;
+  border-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  width: 56px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
 }
 
@@ -136,15 +141,22 @@ h1 span{
 .status.container .text{
   font-size: 19px
 }
+
 .table.container{
   width: 900px;
-  height: 290px;
+  height: 100%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 20px
+  padding: 20px 20px 70px 20px;
+  background-color: white;
+}
+
+.table.container h1{
+  font-weight: 600;
+  font-size: 26px;
 }
 
 .table.container table{
@@ -155,6 +167,7 @@ h1 span{
 .table.container th{
   border-bottom: .5px solid #0000008c;
   padding-bottom: 10px;
+  font-weight: 500;
 }
 
 footer{
@@ -163,11 +176,6 @@ footer{
   justify-content: space-evenly;
   padding: 10px 0 10px 0;
   box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-.card.container{
-  display: flex;
-  justify-content: center; 
-
-  gap: 60px;
+  background-color: white;
+  color: gray;
 }
