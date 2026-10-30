@@ -135,3 +135,10 @@ footer{
   padding: 10px 0 10px 0;
   box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+.card.container{
+  display: flex;
+  justify-content: center; 
+
+  gap: 60px;
+}
