@@ -26,13 +26,13 @@
  - System can be presented without deployment
 
 ### What needs to be done
- - Front end UI (HTML, CSS)
- - Use JS to fetch
- - CRUD
- - Use MongoDB to store data
- - REST API built with Express
+ - CRUD (Frontend to Backend interaction)
 
 ### What has already been accomplished
- - Draft design of UI (Finished on 10/27/26)
+ - Draft web design (Finished on 10/27/26)
  - Created Github repo for collaboration and version control (Finished on 10/29/26)
  - Initial Front end UI (Finished on 10/29/26)
+ - Update Web Design (Finished on 10/30/26)
+ - Use JS to fetch (Finished on 10/30/26)
+ - Use MongoDB to store data (Finished on 10/30/26)
+ - REST API built with Express (Finished on 10/30/26)
