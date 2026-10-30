@@ -116,3 +116,7 @@ app.delete("memberships/:id", async (req, res) => {
   const deleted = await findByIdAndDelete(req.params.id)
   res.json(deleted)
 })
+
+app.listen(3000, () => {
+  console.log("Running on port 3000...")
+})
