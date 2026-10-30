@@ -10,3 +10,12 @@ app.use(express.static("public"))
 mongoose.connect("mongodb://localhost:27017/gym-system")
   .then(() => console.log("Now connected to MongoDB"))
   .catch((error) => console.log(`A connection error ${error} has occurred`))
+
+const memberSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  membership: String,
+  attendance: Number,
+  active: Boolean,
+  createdAt: { type: Date, default: Date.now },
+  expireAt: Date
+})
