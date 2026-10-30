@@ -19,3 +19,8 @@ const memberSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
   expireAt: Date
 })
+
+const membershipSchema = new mongoose.Schema({
+  rate: Number,
+  duration: Number,
+})
