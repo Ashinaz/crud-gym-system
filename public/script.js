@@ -27,6 +27,6 @@ async function loadMembers(){
   const resMemberships = await fetch(membershipAPI)
   const memberships = await resMemberships.json()
 
-
+  membersTable.innerHTML = ""
 
 }
