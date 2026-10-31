@@ -72,7 +72,14 @@ async function loadMemberships(){
   memberships.forEach(plans => {
     const tr = document.createElement("tr")
   
-    
+    tr.innerHTML = 
+      "<td>" + plans.planName + "</td>" +
+      "<td>" + plans.rate + "</td>" +
+      "<td>" + plans.duration + "</td>" +
+      "<td>" +
+        "<button class='edit button memberships'>Edit</button>" +
+        "<button class='delete button memberships'>Delete</button>" +
+      "</td>"
 
   })
 }
