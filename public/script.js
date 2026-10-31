@@ -84,5 +84,8 @@ async function loadMemberships(){
     const editButton = tr.querySelector(".edit.button.memberships")
     const deleteButton = tr.querySelector(".delete.button.memberships")
 
+    editButton.addEventListener("click", () => startEditPlan(plans))
+    deleteButton.addEventListener("click", () => deletePlan(plans._id))
+
   })
 }
