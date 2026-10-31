@@ -87,5 +87,6 @@ async function loadMemberships(){
     editButton.addEventListener("click", () => startEditPlan(plans))
     deleteButton.addEventListener("click", () => deletePlan(plans._id))
 
+    membershipsTable.appendChild(tr)
   })
 }
