@@ -39,6 +39,8 @@ async function loadMembers(){
     const status = active 
       ? "<span class='active true'> Active </span>"
       : "<span class='active false'> Expired </span>"
+    
+    const fullName = `${member.lastName} ${member.firstName}`
 
   })
 }
