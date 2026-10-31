@@ -222,3 +222,6 @@ saveMembershipButton.addEventListener("click", saveMembership)
 
 cancelMemberButton.addEventListener("click", resetMemberForm)
 cancelMembershipButton.addEventListener("click", resetMembershipForm)
+
+loadMembers()
+loadMemberships()
