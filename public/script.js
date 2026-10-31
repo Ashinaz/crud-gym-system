@@ -20,3 +20,13 @@ const membersTable = document.querySelector(".members.table")
 const membershipsTable = document.querySelector(".memberships.table")
 
 const msg = document.querySelector("#msg")
+
+async function loadMembers(){
+  const resMembers = await fetch(memberAPI)
+  const members = await resMembers.json()
+  const resMemberships = await fetch(membershipAPI)
+  const memberships = await resMemberships.json()
+
+
+
+}
