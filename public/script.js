@@ -194,7 +194,6 @@ function resetMemberForm(){
   firstName.value = ""
   plan.value = ""
   memberTitle.textContent = "Register Member"
-  memberCancelBtn.style.display = "none"
 }
 
 function resetMembershipForm(){
@@ -203,7 +202,6 @@ function resetMembershipForm(){
   rate.value = 0
   duration.value = 0
   planTitle.textContent = "Add Membership Plan"
-  planCancelBtn.style.display = "none"
 }
 
 function showMsg(text, isGood){
