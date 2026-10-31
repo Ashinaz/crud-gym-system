@@ -169,3 +169,12 @@ async function deletePlan(id){
   loadMemberships()
   loadMembers()
 }
+
+function startEditMember(member){
+  memberEditingID = member._id
+  lastName.value = member.lastName
+  firstName.value = member.firstName
+  plan.value = member.membership
+  memberTitle.textContent = "Edit Member"
+  memberCancelBtn.style.display = "block"
+}
