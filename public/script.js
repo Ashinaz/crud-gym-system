@@ -90,3 +90,11 @@ async function loadMemberships(){
     membershipsTable.appendChild(tr)
   })
 }
+
+async function saveMember(){
+  const data = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    membership: plan.value,
+  }
+}
