@@ -36,5 +36,9 @@ async function loadMembers(){
     const dateDiff = ((currentDate - new Date (member.createdAt).getTime()) / (1000 * 60 * 60 * 24));
     const active = expiryDays > dateDiff
   
+    const status = active 
+      ? "<span class='active true'> Active </span>"
+      : "<span class='active false'> Expired </span>"
+
   })
 }
