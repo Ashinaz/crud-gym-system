@@ -62,3 +62,11 @@ async function loadMembers(){
     membersTable.appendChild(tr)
   })
 }
+
+async function loadMemberships(){
+  const res = await fetch(membershipAPI)
+  const memberships = await res.json()
+
+  
+
+}
