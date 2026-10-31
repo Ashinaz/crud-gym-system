@@ -82,19 +82,27 @@
   </div>
 
   <div class="table container">
-    <h1>Gym Members</h1>
+    <div class="table-head container">
+      <h1>Gym Members</h1>
+      <div class="search container">
+        <input id="search-members" type="text" placeholder="Search">
+      </div>
+    </div>
     <table>
       <thead>
-        <th>Member</th>
-        <th>Plan</th>
-        <th>Attendance</th>
-        <th>Status</th>
-        <th>Actions</th>
+        <tr>
+          <th>Name</th>
+          <th>Plan</th>
+          <th>Attendance</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
       </thead>
-      <tbody id="table-body">
+      <tbody class="members table">
       </tbody>
     </table>
   </div>
+
 
   <footer>
     <div>© 2026 Gymship</div>
