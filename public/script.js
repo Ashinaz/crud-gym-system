@@ -42,7 +42,7 @@ async function loadMembers(){
 
     const fullName = `${member.lastName} ${member.firstName}`
     const tr = document.createElement("tr")
-    
+
     tr.innerHTML = 
       "<td>" + fullName + "</td>" +
       "<td>" + (member.membership || "") + "</td>" +
@@ -52,6 +52,9 @@ async function loadMembers(){
         "<button class='edit button members'>Edit</button>" +
         "<button class='delete button members'>Delete</button>" +
       "</td>"
+
+    const editButton = tr.querySelector(".edit.button.members")
+    const deleteButton = tr.querySelector(".delete.button.members")
 
   })
 }
