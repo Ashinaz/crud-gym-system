@@ -69,6 +69,10 @@ async function loadMemberships(){
 
   membershipsTable.innerHTML = ""
 
+  memberships.forEach(plans => {
+    const tr = document.createElement("tr")
   
+    
 
+  })
 }
