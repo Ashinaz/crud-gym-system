@@ -145,5 +145,12 @@ async function saveMembership(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
+  }
+
+  if(res.ok) {
+    showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
+    resetMembershipForm()
+    loadMemberships()
+  }
 
 }
