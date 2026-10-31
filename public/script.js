@@ -106,6 +106,12 @@ async function saveMember(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
+  }else {
+    res = await fetch(memberAPI + "/" + memberEditingID, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
   }
 
 }
