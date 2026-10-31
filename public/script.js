@@ -196,3 +196,12 @@ function resetMemberForm(){
   memberTitle.textContent = "Register Member"
   memberCancelBtn.style.display = "none"
 }
+
+function resetMembershipForm(){
+  membershipEditingID = null
+  planName.value = ""
+  Number(rate.value) = 0
+  Number(duration.value) = 0
+  planTitle.textContent = "Add Membership Plan"
+  planCancelBtn.style.display = "none"
+}
