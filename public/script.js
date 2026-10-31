@@ -219,3 +219,6 @@ const cancelMembershipButton = document.querySelector("#cancelMembership")
 
 saveMemberButton.addEventListener("click", saveMember)
 saveMembershipButton.addEventListener("click", saveMembership)
+
+cancelMemberButton.addEventListener("click", resetMemberForm)
+cancelMembershipButton.addEventListener("click", resetMembershipForm)
