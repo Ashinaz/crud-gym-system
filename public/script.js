@@ -112,12 +112,12 @@ async function saveMember(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
+    loadMembers()
+    resetMemberForm()
   }
 
   if(res.ok) {
     showMsg(memberEditingID === null ? "Member added" : "Member Updated", true)
-    resetMemberForm()
-    loadMembers()
   }else {
     showMsg("Name is required", false)
   }
@@ -145,12 +145,12 @@ async function saveMembership(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
+    resetMembershipForm()
+    loadMemberships()
   }
 
   if(res.ok) {
     showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
-    resetMembershipForm()
-    loadMemberships()
   }else {
     showMsg("Name, Duration, and Rate are required", false)
   }
