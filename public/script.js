@@ -200,8 +200,8 @@ function resetMemberForm(){
 function resetMembershipForm(){
   membershipEditingID = null
   planName.value = ""
-  Number(rate.value) = 0
-  Number(duration.value) = 0
+  rate.value = 0
+  duration.value = 0
   planTitle.textContent = "Add Membership Plan"
   planCancelBtn.style.display = "none"
 }
