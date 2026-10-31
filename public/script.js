@@ -42,6 +42,16 @@ async function loadMembers(){
 
     const fullName = `${member.lastName} ${member.firstName}`
     const tr = document.createElement("tr")
+    
+    tr.innerHTML = 
+      "<td>" + fullName + "</td>" +
+      "<td>" + (member.membership || "") + "</td>" +
+      "<td>" + (member.attendance ?? 0) + "</td>" +
+      "<td>" + status + "</td>" +
+      "<td>" +
+        "<button class='edit button members'>Edit</button>" +
+        "<button class='delete button members'>Delete</button>" +
+      "</td>"
 
   })
 }
