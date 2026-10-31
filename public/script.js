@@ -81,5 +81,8 @@ async function loadMemberships(){
         "<button class='delete button memberships'>Delete</button>" +
       "</td>"
 
+    const editButton = tr.querySelector(".edit.button.memberships")
+    const deleteButton = tr.querySelector(".delete.button.memberships")
+
   })
 }
