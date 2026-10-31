@@ -59,5 +59,6 @@ async function loadMembers(){
     editButton.addEventListener("click", () => startEditMember(member))
     deleteButton.addEventListener("click", () => deleteMember(member._id))
 
+    membersTable.appendChild(tr)
   })
 }
