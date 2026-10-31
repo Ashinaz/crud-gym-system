@@ -123,3 +123,11 @@ async function saveMember(){
   }
 
 }
+
+async function saveMembership(){
+  const data = {
+    planName: planName.value,
+    rate: rate.value,
+    duration: duration.value,
+  }
+}
