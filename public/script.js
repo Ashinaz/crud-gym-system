@@ -97,4 +97,7 @@ async function saveMember(){
     lastName: lastName.value,
     membership: plan.value,
   }
+
+  let res
+
 }
