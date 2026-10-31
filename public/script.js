@@ -178,3 +178,12 @@ function startEditMember(member){
   memberTitle.textContent = "Edit Member"
   memberCancelBtn.style.display = "block"
 }
+
+function startEditPlan(plan){
+  membershipEditingID = plan._id
+  planName.value = plan.planName
+  rate.value = plan.rate
+  duration.value = plan.duration
+  planTitle.textContent = "Edit Membership"
+  planCancelBtn.style.display = "block"
+}
