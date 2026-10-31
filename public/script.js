@@ -67,6 +67,8 @@ async function loadMemberships(){
   const res = await fetch(membershipAPI)
   const memberships = await res.json()
 
+  membershipsTable.innerHTML = ""
+
   
 
 }
