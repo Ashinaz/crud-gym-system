@@ -210,3 +210,7 @@ function showMsg(text, isGood){
   msg.textContent = text
   msg.className = isGood ? "good" : "err"
 }
+
+const saveMemberButton = document.querySelector("#saveMember")
+const saveMembershipButton = document.querySelector("#saveMembership")
+
