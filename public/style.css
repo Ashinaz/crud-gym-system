@@ -177,6 +177,10 @@ nav h1{
   font-weight: 500;
 }
 
+.table.container td{
+  text-align: center;
+}
+
 footer{
   width: 100%;
   display: flex;
