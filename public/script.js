@@ -18,3 +18,5 @@ const planTitle = document.querySelector("#plan-title")
 
 const membersTable = document.querySelector(".members.table")
 const membershipsTable = document.querySelector(".memberships.table")
+
+const msg = document.querySelector("#msg")
