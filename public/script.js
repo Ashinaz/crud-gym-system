@@ -214,3 +214,6 @@ function showMsg(text, isGood){
 const saveMemberButton = document.querySelector("#saveMember")
 const saveMembershipButton = document.querySelector("#saveMembership")
 
+const cancelMemberButton = document.querySelector("#cancelMember")
+const cancelMembershipButton = document.querySelector("#cancelMembership")
+
