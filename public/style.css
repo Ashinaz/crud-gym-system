@@ -179,7 +179,11 @@ nav h1{
 
 .table.container td{
   text-align: center;
+  color: #333333;
+  padding: 4px
 }
+
+
 
 footer{
   width: 100%;
