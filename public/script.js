@@ -162,3 +162,10 @@ async function deleteMember(id){
   showMsg("Member Deleted", true)
   loadMembers()
 }
+
+async function deletePlan(id){
+  await fetch(membershipAPI + "/" + id, {method: "DELETE"})
+  showMsg("Membership Deleted", true)
+  loadMemberships()
+  loadMembers()
+}
