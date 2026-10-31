@@ -187,3 +187,12 @@ function startEditPlan(plan){
   planTitle.textContent = "Edit Membership"
   planCancelBtn.style.display = "block"
 }
+
+function resetMemberForm(){
+  memberEditingID = null
+  lastName.value = ""
+  firstName.value = ""
+  plan.value = ""
+  memberTitle.textContent = "Register Member"
+  memberCancelBtn.style.display = "none"
+}
