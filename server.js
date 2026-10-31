@@ -16,17 +16,17 @@ mongoose.connect(DB_URL)
   .catch((error) => console.log(`A connection error ${error} has occurred`))
 
 const memberSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  lastName: { type: String, required: true },
+  firstName: { type: String, required: true },
   membership: String,
-  attendance: Number,
-  active: Boolean,
+  attendance: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
-  expireAt: Date
 })
 
 const membershipSchema = new mongoose.Schema({
-  rate: Number,
-  duration: Number,
+  planName: { type: String, required: true },
+  rate: { type: Number, required: true },
+  duration: { type: Number, required: true },
 })
 
 const Member = mongoose.model("Member", memberSchema)
@@ -56,12 +56,9 @@ app.get("/membership/:id", async (req, res) => {
 app.post("/members", async (req, res) => {
   try{
     const newMember = new Member({
-      name: req.body.name,
+      lastName: req.body.lastName,
+      firstName: req.body.firstName,
       membership: req.body.membership,
-      attendance: req.body.attendance,
-      active: req.body.active,
-      createdAt: req.body.createdAt,
-      expireAt: req.body.expireAt,
     })
     const saved = await newMember.save()
     res.status(201).json(saved)
@@ -73,6 +70,7 @@ app.post("/members", async (req, res) => {
 app.post("/memberships", async (req, res) => {
   try{
     const newMembership = new Membership({
+      planName: req.body.planName,
       rate: req.body.rate,
       duration: req.body.duration,
     })
@@ -87,14 +85,11 @@ app.put("/members/:id", async (req, res) => {
   const updated = await Member.findByIdAndUpdate(
     req.params.id, 
     {
-      name: req.body.name,
+      lastName: req.body.lastName,
+      firstName: req.body.firstName,
       membership: req.body.membership,
-      attendance: req.body.attendance,
-      active: req.body.active,
-      createdAt: req.body.createdAt,
-      expireAt: req.body.expireAt,
     },
-    { new: true }
+    { new: true, runValidators: true }
   )
   res.json(updated)
 })
@@ -103,21 +98,22 @@ app.put("/memberships/:id", async (req, res) => {
   const updated = await Membership.findByIdAndUpdate(
     req.params.id, 
     {
+      planName: req.body.planName,
       rate: req.body.rate,
       duration: req.body.duration,
     },
-    { new: true }
+    { new: true, runValidators: true }
   )
   res.json(updated)
 })
 
-app.delete("members/:id", async (req, res) => {
-  const deleted = await findByIdAndDelete(req.params.id)
+app.delete("/members/:id", async (req, res) => {
+  const deleted = await Member.findByIdAndDelete(req.params.id)
   res.json(deleted)
 })
 
-app.delete("memberships/:id", async (req, res) => {
-  const deleted = await findByIdAndDelete(req.params.id)
+app.delete("/memberships/:id", async (req, res) => {
+  const deleted = await Membership.findByIdAndDelete(req.params.id)
   res.json(deleted)
 })
 
