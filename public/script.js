@@ -100,4 +100,12 @@ async function saveMember(){
 
   let res
 
+  if(memberEditingID === null) {
+    res = await fetch(memberAPI, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    })
+  }
+
 }
