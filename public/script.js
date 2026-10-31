@@ -205,3 +205,8 @@ function resetMembershipForm(){
   planTitle.textContent = "Add Membership Plan"
   planCancelBtn.style.display = "none"
 }
+
+function showMsg(text, isGood){
+  msg.textContent = text
+  msg.className = isGood ? "good" : "err"
+}
