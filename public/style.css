@@ -1,7 +1,7 @@
 body{
   display:flex;
   margin: 0;
-  font-family: inter;
+  font-family: "inter", sans-serif;
   flex-direction: column;
   align-items: center;
   justify-content: start;
@@ -21,34 +21,24 @@ nav{
 }
 
 nav h1{
-  color: #ce2c5a;
-  font-size: 29px;
-  font-weight: 500;
-  margin: 0 auto 0 0;
+  font-size: 38px;
+  font-weight: 700;
+  margin: 14px auto 0 0;
+  color: #333333
 }
 
-nav h1, .link.container{
+.link.container{
   margin-top: 20px;
-}
-
-h1 span{
-  color: #f90706;
 }
 
 .link{
   font-size: 29px;
-}
-
-.read{
-  color: #ce2c5a;
-}
-.delete{
-  color: #f90706;
+  color: #333333
 }
 
 .input.container{
   width: 400px;
-  height: 340px;
+  height: 100%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   display: flex;
@@ -83,14 +73,15 @@ h1 span{
 
 .input.section label{
   font-size: 22px;
-  padding: 10px
+  padding: 10px;
+  color: #333333
 }
 
 .input.buttons button{
-  background-color: #ec205a;
+  background-color: #54457F;
   border-color: rgb(255, 255, 255);
   border-radius: 6px;
-  width: 56px;
+  width: 70px;
   height: 32px;
   font-size: 14px;
   font-weight: bold;
@@ -103,7 +94,7 @@ h1 span{
   padding: 20px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  background-color: #ec205a;
+  background-color: #54457F;
   color: white;
   display: flex;
   flex-direction: column;
@@ -157,6 +148,22 @@ h1 span{
 .table.container h1{
   font-weight: 600;
   font-size: 26px;
+  margin-right: auto;
+  color: #333333
+}
+
+.table-head.container{
+  padding: 0;
+  display:flex;
+}
+
+.table-head.container input{
+  margin: 20px;
+  padding: 10px 10px 10px 10px;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 8px;
+  width: 200px;
 }
 
 .table.container table{
@@ -165,7 +172,7 @@ h1 span{
 }
 
 .table.container th{
-  border-bottom: .5px solid #0000008c;
+  border-bottom: .5px solid #333333;
   padding-bottom: 10px;
   font-weight: 500;
 }
