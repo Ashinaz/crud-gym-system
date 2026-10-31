@@ -114,4 +114,10 @@ async function saveMember(){
     })
   }
 
+  if(res.ok) {
+    showMsg(memberEditingID === null ? "Member added" : "Member Updated", true)
+    resetMemberForm()
+    loadMembers()
+  }
+
 }
