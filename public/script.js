@@ -118,6 +118,8 @@ async function saveMember(){
     showMsg(memberEditingID === null ? "Member added" : "Member Updated", true)
     resetMemberForm()
     loadMembers()
+  }else {
+    showMsg("Name is required", false)
   }
 
 }
