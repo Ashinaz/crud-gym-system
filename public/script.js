@@ -29,4 +29,12 @@ async function loadMembers(){
 
   membersTable.innerHTML = ""
 
+  members.forEach(member => {
+    const matchedPlan = memberships.find(p => p.planName == member.membership)
+    const expiryDays = matchedPlan ? matchedPlan.duration : 0
+    let currentDate = Date.now() 
+    const dateDiff = ((currentDate - new Date (member.createdAt).getTime()) / (1000 * 60 * 60 * 24));
+    const active = expiryDays > dateDiff
+  
+  })
 }
