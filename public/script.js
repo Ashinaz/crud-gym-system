@@ -156,3 +156,9 @@ async function saveMembership(){
   }
 
 }
+
+async function deleteMember(id){
+  await fetch(memberAPI + "/" + id, {method: "DELETE"})
+  showMsg("Member Deleted", true)
+  loadMembers()
+}
