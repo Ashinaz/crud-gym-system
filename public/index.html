@@ -42,9 +42,13 @@
   </div>
 
   <div class="input container">
-    <h1>Add Membership Plan</h1>
+    <h1 id="plan-title">Add Membership Plan</h1>
     <div class="input section">
-      <label>Duration</label>
+      <label>Name</label>
+      <input id="name" type="text" placeholder="Input Name">
+    </div>
+    <div class="input section">
+      <label>Duration (days)</label>
       <input id="duration" type="number" placeholder="0">
     </div>
     <div class="input section">
@@ -52,7 +56,8 @@
       <input id="rate" type="number" placeholder="0">
     </div>
     <div class="input buttons">
-      <button>Save</button>
+      <button id="saveMembership" class="plan save button">Save</button>
+      <button id="cancelMembership" class="plan cancel button">Cancel</button>
     </div>
   </div>
 
