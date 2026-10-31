@@ -130,4 +130,7 @@ async function saveMembership(){
     rate: rate.value,
     duration: duration.value,
   }
+
+  let res
+
 }
