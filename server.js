@@ -1,3 +1,5 @@
+const dotenv = require('dotenv');
+dotenv.config()
 const express = require("express")
 const mongoose = require("mongoose")
 
@@ -7,7 +9,9 @@ app.use(express.json())
 
 app.use(express.static("public"))
 
-mongoose.connect("mongodb://localhost:27017/gym-system")
+const DB_URL = process.env.MONGODB_URI
+
+mongoose.connect(DB_URL)
   .then(() => console.log("Now connected to MongoDB"))
   .catch((error) => console.log(`A connection error ${error} has occurred`))
 
