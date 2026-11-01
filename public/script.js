@@ -191,7 +191,7 @@ function startEditPlan(plan){
   planCancelBtn.style.display = "inline"
 }
 
-function resetMemberForm(){
+async function resetMemberForm(){
   memberEditingID = null
   lastName.value = ""
   firstName.value = ""
