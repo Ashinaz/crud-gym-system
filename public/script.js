@@ -96,8 +96,8 @@ async function loadMemberships(){
 
 async function saveMember(){
   const data = {
-    firstName: firstName.value,
-    lastName: lastName.value,
+    firstName: firstName.value.trim(),
+    lastName: lastName.value.trim(),
     membership: planSelect.value,
   }
 
@@ -129,7 +129,7 @@ async function saveMember(){
 
 async function saveMembership(){
   const data = {
-    planName: planName.value,
+    planName: planName.value.trim(),
     rate: rate.value,
     duration: duration.value,
   }
