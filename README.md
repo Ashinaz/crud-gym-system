@@ -32,7 +32,6 @@
  - Search/Filter Functionality
  - Log attendance functionality
  - Membership plan dropdown option in members form
- - Debug error CRUD causing to need to reset page to take affect
  - Gym status updates
 
 
@@ -46,3 +45,4 @@
  - REST API built with Express (Finished on 10/30/26)
  - CRUD / Frontend to Backend interaction (Finished on 10/31/26)
  - Search/Filter Design (Finished on 10/31/26)
+ - Debug error CRUD causing to need to reset page to take affect (11/01/26)
