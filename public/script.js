@@ -6,7 +6,7 @@ let membershipEditingID = null
 
 const lastName = document.querySelector("#lastName")
 const firstName = document.querySelector("#firstName") 
-const plan = document.querySelector("#plan")
+const planSelect = document.querySelector("#plan-selection")
 const memberCancelBtn = document.querySelector("#cancelMember")
 const memberTitle = document.querySelector("#member-title")
 
@@ -98,7 +98,7 @@ async function saveMember(){
   const data = {
     firstName: firstName.value,
     lastName: lastName.value,
-    membership: plan.value,
+    membership: planSelect.value,
   }
 
   let res
@@ -177,7 +177,7 @@ function startEditMember(member){
   memberEditingID = member._id
   lastName.value = member.lastName
   firstName.value = member.firstName
-  plan.value = member.membership
+  planSelect.value = member.membership
   memberTitle.textContent = "Edit Member"
   memberCancelBtn.style.display = "inline"
 }
