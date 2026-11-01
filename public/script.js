@@ -30,11 +30,14 @@ async function loadMembers(){
   membersTable.innerHTML = ""
 
   members.forEach(member => {
-    const matchedPlan = memberships.find(p => p.planName == member.membership)
+    const oneDay = 1000 * 60 * 60 * 24
+    const matchedPlan = memberships.find(p => p.planName === member.membership)
     const expiryDays = matchedPlan ? matchedPlan.duration : 0
-    let currentDate = Date.now() 
-    const dateDiff = ((currentDate - new Date (member.createdAt).getTime()) / (1000 * 60 * 60 * 24));
-    const active = expiryDays > dateDiff
+    const currentDate = new Date()
+    const memberTime = new Date(member.createdAt)
+    const dateDiff = (currentDate.getTime() - memberTime.getTime());
+    const dayDiff = Math.round(dateDiff / oneDay)
+    const active = expiryDays > dayDiff 
   
     const status = active 
       ? "<span class='active true'> Active </span>"
@@ -176,7 +179,7 @@ function startEditMember(member){
   firstName.value = member.firstName
   plan.value = member.membership
   memberTitle.textContent = "Edit Member"
-  memberCancelBtn.style.display = "block"
+  memberCancelBtn.style.display = "inline"
 }
 
 function startEditPlan(plan){
@@ -185,7 +188,7 @@ function startEditPlan(plan){
   rate.value = plan.rate
   duration.value = plan.duration
   planTitle.textContent = "Edit Membership"
-  planCancelBtn.style.display = "block"
+  planCancelBtn.style.display = "inline"
 }
 
 function resetMemberForm(){
