@@ -210,7 +210,6 @@ function resetMembershipForm(){
 function showMsg(text, isGood){
   msgContainer.style.display = "block"
   msg.textContent = text
-  msg.appendChild(closeMsg)
   msg.className = isGood ? "good" : "err"
 }
 
@@ -225,13 +224,6 @@ saveMembershipButton.addEventListener("click", saveMembership)
 
 cancelMemberButton.addEventListener("click", resetMemberForm)
 cancelMembershipButton.addEventListener("click", resetMembershipForm)
-
-const msgContainer = document.querySelector("#msg-container")
-const closeMsg = document.querySelector("#close")
-
-closeMsg.addEventListener("click", function() {
-  msgContainer.style.display = "none"
-})
 
 loadMembers()
 loadMemberships()
