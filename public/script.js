@@ -195,8 +195,11 @@ function resetMemberForm(){
   memberEditingID = null
   lastName.value = ""
   firstName.value = ""
-  plan.value = ""
   memberTitle.textContent = "Register Member"
+  planSelect.length = 0
+  const option = document.createElement("option")
+  option.text = "---Select a plan---"
+  planSelect.add(option)
 }
 
 function resetMembershipForm(){
