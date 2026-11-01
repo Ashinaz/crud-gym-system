@@ -65,7 +65,7 @@ a{
   color: gray;
 }
 
-.input.section input{
+.input.section input, select{
   border-color: rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   width: 100%;
@@ -73,6 +73,11 @@ a{
   padding: 10px 10px 10px 10px;
   font-size: 14px;
   font-weight: 400;
+}
+
+.input.section select{
+  width: 108%;
+  height: 42px;
 }
 
 .input.section label{
