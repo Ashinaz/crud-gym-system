@@ -115,12 +115,12 @@ async function saveMember(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
-    loadMembers()
-    resetMemberForm()
   }
 
   if(res.ok) {
     showMsg(memberEditingID === null ? "Member added" : "Member Updated", true)
+    loadMembers()
+    resetMemberForm()
   }else {
     showMsg("Name is required", false)
   }
@@ -208,7 +208,7 @@ function resetMembershipForm(){
 }
 
 function showMsg(text, isGood){
-  msgContainer.style.display = "block"
+  msg.style.display = "block"
   msg.textContent = text
   msg.className = isGood ? "good" : "err"
 }
