@@ -29,8 +29,11 @@
  - System can be presented without deployment
 
 ### What needs to be done
- - CRUD (Frontend to Backend interaction)
- - Search/Filter Functionality and Design
+ - Search/Filter Functionality
+ - Log attendance functionality
+ - Membership plan dropdown option in members form
+ - Debug error CRUD causing to need to reset page to take affect
+ - Gym status updates
 
 
 ### What has already been accomplished
@@ -41,3 +44,5 @@
  - Use JS to fetch (Finished on 10/30/26)
  - Use MongoDB to store data (Finished on 10/30/26)
  - REST API built with Express (Finished on 10/30/26)
+ - CRUD / Frontend to Backend interaction (Finished on 10/31/26)
+ - Search/Filter Design (Finished on 10/31/26)
