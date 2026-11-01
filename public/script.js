@@ -151,9 +151,9 @@ async function saveMembership(){
   }
 
   if(res.ok) {
+    showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
     resetMembershipForm()
     loadMemberships()
-    showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
   }else {
     showMsg("Name, Duration, and Rate are required", false)
   }
