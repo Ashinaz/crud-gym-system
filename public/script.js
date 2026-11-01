@@ -148,11 +148,11 @@ async function saveMembership(){
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data)
     })
-    resetMembershipForm()
-    loadMemberships()
   }
 
   if(res.ok) {
+    resetMembershipForm()
+    loadMemberships()
     showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
   }else {
     showMsg("Name, Duration, and Rate are required", false)
