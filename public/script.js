@@ -209,7 +209,7 @@ function resetMembershipForm(){
 
 function showMsg(text, isGood){
   msg.style.display = "block"
-  msg.textContent = `text`
+  msg.textContent = text
   msg.appendChild(closeMsg)
   msg.className = isGood ? "good" : "err"
 }
