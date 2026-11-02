@@ -249,14 +249,14 @@ function showMsg(text, isGood){
   msg.style.display = "flex"
   msg.appendChild(p)
   if (!(msg.className)){
-  const closeButton = document.createElement("button")
-  closeButton.className = "close-msg"
-  closeButton.addEventListener("click", () => {
-    msg.style.display = "none"
-    msg.textContent = ""
-    msg.className = ""
-  })
-  closeButton.textContent = "Close"
+    const closeButton = document.createElement("button")
+    closeButton.className = "close-msg"
+    closeButton.addEventListener("click", () => {
+      msg.style.display = "none"
+      msg.textContent = ""
+      msg.className = ""
+    })
+    closeButton.textContent = "Success!"
     msg.appendChild(closeButton)
   }
   msg.className = isGood ? "good" : "err"
