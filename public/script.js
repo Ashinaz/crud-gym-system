@@ -256,7 +256,7 @@ function showMsg(text, isGood){
       msg.textContent = ""
       msg.className = ""
     })
-    closeButton.textContent = "Success!"
+    closeButton.textContent = "Close"
     msg.appendChild(closeButton)
   }
   msg.className = isGood ? "good" : "err"
