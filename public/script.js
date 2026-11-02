@@ -272,6 +272,9 @@ function showMsg(text, isGood){
 }
 
 searchMembers.addEventListener("input", async function(e) {
+  const res = await fetch(memberAPI)
+  const members = await res.json()
+  const filteredMembers = members.filter((m) => (m.lastName + m.firstName).startsWith(e.target.value))
 })
 
 const saveMemberButton = document.querySelector("#saveMember")
