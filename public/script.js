@@ -33,12 +33,12 @@ async function loadMembers(searchMembers){
   const loadedMembers = await resMembers.json()
   const resMemberships = await fetch(membershipAPI)
   const memberships = await resMemberships.json()
-
-  membersTable.innerHTML = ""
+  const totalMembers = loadedMembers.length
 
   const members = (searchMembers !== undefined) ? searchMembers : loadedMembers
   console.log(members)
 
+  membersTable.innerHTML = ""
   members.forEach(member => {
     const oneDay = 1000 * 60 * 60 * 24
     const matchedPlan = memberships.find(p => p._id === member.membership)
