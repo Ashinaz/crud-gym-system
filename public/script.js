@@ -274,7 +274,9 @@ function showMsg(text, isGood){
 searchMembers.addEventListener("input", async function(e) {
   const res = await fetch(memberAPI)
   const members = await res.json()
-  const filteredMembers = members.filter((m) => (m.lastName + m.firstName).startsWith(e.target.value))
+  const filteredMembers = members.filter((m) => (`${m.lastName.toLowerCase()}, ${m.firstName}`)
+                                                  .toLowerCase()
+                                                  .startsWith(e.target.value.toLowerCase()))
   if(e){
     loadMembers(filteredMembers)
   }else {loadMembers()}
