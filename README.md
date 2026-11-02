@@ -46,3 +46,4 @@
  - Membership plan dropdown option in members form (Finished on 11/02/26)
  - use id of plan instead of raw name when matching plans (Finished on 11/02/26)
  - Log attendance functionality (Finished on 11/02/26)
+ - Alert box message and button design and functionality (Finished on 11/02/26)
