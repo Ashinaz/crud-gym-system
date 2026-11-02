@@ -130,8 +130,7 @@ async function saveMember(){
   }
 
   let res
-
-  if(!(planSelect.value)) {
+  if(!(planSelect.value === "---Select a plan---")) {
   if(memberEditingID === null) {
       res = await fetch(memberAPI, {
         method: "POST",
