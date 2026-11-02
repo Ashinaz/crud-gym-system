@@ -30,7 +30,6 @@
 
 ### What needs to be done
  - Search/Filter Functionality
- - Log attendance functionality
  - Gym status updates
 
 ### What has already been accomplished
@@ -43,6 +42,7 @@
  - REST API built with Express (Finished on 10/30/26)
  - CRUD / Frontend to Backend interaction (Finished on 10/31/26)
  - Search/Filter Design (Finished on 10/31/26)
- - Debug error CRUD causing to need to reset page to take affect (11/01/26)
- - Membership plan dropdown option in members form (11/02/26)
- - use id of plan instead of raw name when matching plans (11/02/26)
+ - Debug error CRUD causing to need to reset page to take affect (Finished on 11/01/26)
+ - Membership plan dropdown option in members form (Finished on 11/02/26)
+ - use id of plan instead of raw name when matching plans (Finished on 11/02/26)
+ - Log attendance functionality (Finished on 11/02/26)
