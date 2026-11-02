@@ -31,13 +31,13 @@ async function loadMembers(){
 
   members.forEach(member => {
     const oneDay = 1000 * 60 * 60 * 24
-    const matchedPlan = memberships.find(p => p.planName === member.membership)
+    const matchedPlan = memberships.find(p => p._id === member.membership)
     const expiryDays = matchedPlan ? matchedPlan.duration : 0
     const currentDate = new Date()
     const memberTime = new Date(member.createdAt)
     const dateDiff = (currentDate.getTime() - memberTime.getTime());
     const dayDiff = Math.round(dateDiff / oneDay)
-    const active = expiryDays > dayDiff 
+    const active = expiryDays > dayDiff
   
     const status = active 
       ? "<span class='active true'> Active </span>"
@@ -48,7 +48,7 @@ async function loadMembers(){
 
     tr.innerHTML = 
       "<td>" + fullName + "</td>" +
-      "<td>" + (member.membership || "") + "</td>" +
+      "<td>" + (matchedPlan.planName || "") + "</td>" +
       "<td>" + (member.attendance ?? 0) + "</td>" +
       "<td>" + status + "</td>" +
       "<td>" +
