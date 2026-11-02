@@ -21,6 +21,9 @@ const membershipsTable = document.querySelector(".memberships.table")
 
 const msg = document.querySelector("#msg")
 
+const searchMembers = document.querySelector("#search-members")
+const searchPlans = document.querySelector("#search-plans")
+
 async function loadMembers(searchMembers){
   const resMembers = await fetch(memberAPI)
   const loadedMembers = await resMembers.json()
