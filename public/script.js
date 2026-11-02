@@ -52,9 +52,7 @@ async function loadMembers(searchMembers){
     const active = expiryDays > dayDiff
     console.log(member)
     
-    if(active) {
-      activeMembers+=
-    }
+    if(active) {activeMembers++}
 
     const status = active 
       ? "<span class='active true'> Active </span>"
