@@ -224,6 +224,23 @@ function resetMembershipForm(){
   planTitle.textContent = "Add Membership Plan"
 }
 
+async function logAttendance(member){
+  const data = {
+    attendance: member.attendance+= 1
+  }
+
+  const res = await fetch(memberAPI + "/" + member._id, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+  
+  if(res.ok) {
+    showMsg("Member's attendance logged", true)
+    loadMembers()
+  }
+}
+
 function showMsg(text, isGood){
   msg.style.display = "block"
   msg.textContent = text
