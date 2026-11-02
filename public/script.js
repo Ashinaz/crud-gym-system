@@ -180,9 +180,9 @@ async function saveMembership(){
 
   if(res.ok) {
     showMsg(membershipEditingID === null ? `${planName.value} Added` : `${planName.value} Updated`, true)
-    resetMemberForm()
     resetMembershipForm()
     loadMemberships()
+    loadMembers()
   }else {
     showMsg("Name, Duration, and Rate are required", false)
   }
