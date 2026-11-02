@@ -243,8 +243,20 @@ async function logAttendance(member){
 }
 
 function showMsg(text, isGood){
-  msg.style.display = "block"
-  msg.textContent = text
+  const closeButton = document.createElement("button")
+  closeButton.className = "close-msg"
+  closeButton.addEventListener("click", () => {
+    msg.style.display = "none"
+    msg.textContent = ""
+  })
+  closeButton.textContent = "Close"
+  
+  const p = document.createElement("p")
+  p.textContent = text
+
+  msg.style.display = "flex"
+  msg.appendChild(p)
+  msg.appendChild(closeButton)
   msg.className = isGood ? "good" : "err"
 }
 
