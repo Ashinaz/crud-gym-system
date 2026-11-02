@@ -31,9 +31,8 @@
 ### What needs to be done
  - Search/Filter Functionality
  - Log attendance functionality
- - Membership plan dropdown option in members form
  - Gym status updates
-
+ - use id of plan instead of raw name when matching plans
 
 ### What has already been accomplished
  - Draft web design (Finished on 10/27/26)
@@ -46,3 +45,4 @@
  - CRUD / Frontend to Backend interaction (Finished on 10/31/26)
  - Search/Filter Design (Finished on 10/31/26)
  - Debug error CRUD causing to need to reset page to take affect (11/01/26)
+ - Membership plan dropdown option in members form (11/02/26)
