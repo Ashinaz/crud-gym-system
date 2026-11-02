@@ -89,6 +89,7 @@ app.put("/members/:id", async (req, res) => {
       firstName: req.body.firstName,
       membership: req.body.membership,
       createdAt: req.body.createdAt,
+      attendance: req.body.attendance,
     },
     { new: true, runValidators: true }
   )
