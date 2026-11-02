@@ -247,7 +247,7 @@ function showMsg(text, isGood){
   p.textContent = text
 
   msg.style.display = "flex"
-  msg.appendChild(p)
+  msg.prepend(p)
   if (!(msg.className)){
     const closeButton = document.createElement("button")
     closeButton.className = "close-msg"
