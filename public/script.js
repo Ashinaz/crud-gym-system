@@ -82,6 +82,10 @@ async function loadMembers(searchMembers){
 
     membersTable.appendChild(tr)
   })
+
+  totalCount.textContent = totalMembers
+  activeCount.textContent = activeMembers
+
 }
 
 async function loadMemberships(searchPlans){
