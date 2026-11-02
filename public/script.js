@@ -282,6 +282,17 @@ searchMembers.addEventListener("input", async function(e) {
   }else {loadMembers()}
 })
 
+searchPlans.addEventListener("input", async function(e) {
+  const res = await fetch(membershipAPI)
+  const memberships = await res.json()
+  const filteredMemberships = memberships.filter((m) => (m.planName)
+                                                  .toLowerCase()
+                                                  .startsWith(e.target.value.toLowerCase()))
+  if(e){
+    loadMemberships(filteredMemberships)
+  }else {loadMemberships()}
+})
+
 const saveMemberButton = document.querySelector("#saveMember")
 const saveMembershipButton = document.querySelector("#saveMembership")
 
