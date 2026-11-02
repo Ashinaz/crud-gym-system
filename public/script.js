@@ -83,9 +83,11 @@ async function loadMembers(searchMembers){
     membersTable.appendChild(tr)
   })
 
+  const inactiveMembers = totalMembers - activeMembers
+
   totalCount.textContent = totalMembers
   activeCount.textContent = activeMembers
-
+  inactiveCount.textContent = inactiveMembers
 }
 
 async function loadMemberships(searchPlans){
