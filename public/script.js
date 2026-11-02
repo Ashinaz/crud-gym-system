@@ -200,6 +200,9 @@ async function resetMemberForm(){
   const option = document.createElement("option")
   option.text = "---Select a plan---"
   planSelect.add(option)
+
+  const res = await fetch(membershipAPI)
+  const memberships = await res.json()
 }
 
 function resetMembershipForm(){
