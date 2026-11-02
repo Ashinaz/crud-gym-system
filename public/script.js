@@ -33,7 +33,9 @@ async function loadMembers(searchMembers){
   const loadedMembers = await resMembers.json()
   const resMemberships = await fetch(membershipAPI)
   const memberships = await resMemberships.json()
+
   const totalMembers = loadedMembers.length
+  let activeMembers = 0
 
   const members = (searchMembers !== undefined) ? searchMembers : loadedMembers
   console.log(members)
@@ -49,7 +51,11 @@ async function loadMembers(searchMembers){
     const dayDiff = Math.round(dateDiff / oneDay)
     const active = expiryDays > dayDiff
     console.log(member)
-  
+    
+    if(active) {
+      activeMembers+=
+    }
+
     const status = active 
       ? "<span class='active true'> Active </span>"
       : "<span class='active false'> Expired </span>"
