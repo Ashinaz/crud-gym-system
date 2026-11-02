@@ -76,11 +76,14 @@ async function loadMembers(searchMembers){
   })
 }
 
-async function loadMemberships(){
+async function loadMemberships(searchPlans){
   const res = await fetch(membershipAPI)
-  const memberships = await res.json()
+  const loadedMemberships = await res.json()
 
   membershipsTable.innerHTML = ""
+
+  const memberships = (searchPlans !== undefined) ? searchPlans : loadedMemberships
+  console.log(memberships)
 
   memberships.forEach(plans => {
     const tr = document.createElement("tr")
