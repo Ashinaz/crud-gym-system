@@ -243,20 +243,22 @@ async function logAttendance(member){
 }
 
 function showMsg(text, isGood){
-  const closeButton = document.createElement("button")
-  closeButton.className = "close-msg"
-  closeButton.addEventListener("click", () => {
-    msg.style.display = "none"
-    msg.textContent = ""
-  })
-  closeButton.textContent = "Close"
-  
   const p = document.createElement("p")
   p.textContent = text
 
   msg.style.display = "flex"
   msg.appendChild(p)
-  msg.appendChild(closeButton)
+  if (!(msg.className)){
+  const closeButton = document.createElement("button")
+  closeButton.className = "close-msg"
+  closeButton.addEventListener("click", () => {
+    msg.style.display = "none"
+    msg.textContent = ""
+    msg.className = ""
+  })
+  closeButton.textContent = "Close"
+    msg.appendChild(closeButton)
+  }
   msg.className = isGood ? "good" : "err"
 }
 
