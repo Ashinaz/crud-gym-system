@@ -18,7 +18,7 @@ mongoose.connect(DB_URL)
 const memberSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   firstName: { type: String, required: true },
-  membership: String,
+  membership: { type: String, required: true },
   attendance: { type: Number, default: 0 },
   createdAt: { type: Date, default: Date.now },
 })
