@@ -56,10 +56,12 @@ async function loadMembers(){
         "<button class='edit button members'>Edit</button>" +
         "<button class='delete button members'>Delete</button>" +
       "</td>"
-    
+
     const editButton = tr.querySelector(".edit.button.members")
     const deleteButton = tr.querySelector(".delete.button.members")
+    const attendanceButton = tr.querySelector(".attendance.button")
 
+    attendanceButton.addEventListener("click", () => logAttendance(member))
     editButton.addEventListener("click", () => startEditMember(member))
     deleteButton.addEventListener("click", () => deleteMember(member._id))
 
