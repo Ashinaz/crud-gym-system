@@ -99,6 +99,7 @@ async function saveMember(){
     firstName: firstName.value.trim(),
     lastName: lastName.value.trim(),
     membership: planSelect.value,
+    createdAt: new Date()
   }
 
   let res
