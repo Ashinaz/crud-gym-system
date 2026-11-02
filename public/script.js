@@ -61,9 +61,11 @@ async function loadMembers(searchMembers){
     const fullName = `${member.lastName} ${member.firstName}`
     const tr = document.createElement("tr")
 
+    const plan = (matchedPlan) === undefined ? "" : matchedPlan.planName
+
     tr.innerHTML = 
       "<td>" + fullName + "</td>" +
-      "<td>" + (matchedPlan.planName || "") + "</td>" +
+      "<td>" + (plan || "") + "</td>" +
       "<td>" + (member.attendance ?? 0) + "</td>" +
       "<td>" + status + "</td>" +
       "<td>" +
