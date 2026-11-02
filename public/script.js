@@ -24,6 +24,10 @@ const msg = document.querySelector("#msg")
 const searchMembers = document.querySelector("#search-members")
 const searchPlans = document.querySelector("#search-plans")
 
+const totalCount = document.querySelector("#total-count")
+const activeCount = document.querySelector("#active-count")
+const inactiveCount = document.querySelector("#inactive-count")
+
 async function loadMembers(searchMembers){
   const resMembers = await fetch(memberAPI)
   const loadedMembers = await resMembers.json()
