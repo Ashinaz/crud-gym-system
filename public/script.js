@@ -131,28 +131,29 @@ async function saveMember(){
 
   let res
 
+  if(!(planSelect.value)) {
   if(memberEditingID === null) {
-    res = await fetch(memberAPI, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    })
-  }else {
-    res = await fetch(memberAPI + "/" + memberEditingID, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    })
-  }
+      res = await fetch(memberAPI, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+    }else {
+      res = await fetch(memberAPI + "/" + memberEditingID, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      })
+    }
 
-  if(res.ok) {
-    showMsg(memberEditingID === null ? `${lastName.value} added` : `${data.lastName} Updated`, true)
-    loadMembers()
-    resetMemberForm()
-  }else {
-    showMsg("Name is required", false)
-  }
-
+    if(res.ok) {
+      showMsg(memberEditingID === null ? `${lastName.value} added` : `${data.lastName} Updated`, true)
+      loadMembers()
+      resetMemberForm()
+    }else {
+      showMsg("Complete all fields.", false)
+    }
+  } else {showMsg("Complete all fields.", false)}
 }
 
 async function saveMembership(){
