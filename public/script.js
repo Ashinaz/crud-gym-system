@@ -203,6 +203,13 @@ async function resetMemberForm(){
 
   const res = await fetch(membershipAPI)
   const memberships = await res.json()
+
+  memberships.forEach(plan => {
+    const option = document.createElement("option")
+    option.text = plan.planName
+    option.value = plan._id
+    planSelect.add(option)
+  })
 }
 
 function resetMembershipForm(){
