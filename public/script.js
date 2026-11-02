@@ -38,6 +38,7 @@ async function loadMembers(){
     const dateDiff = (currentDate.getTime() - memberTime.getTime());
     const dayDiff = Math.round(dateDiff / oneDay)
     const active = expiryDays > dayDiff
+    console.log(member)
   
     const status = active 
       ? "<span class='active true'> Active </span>"
@@ -122,7 +123,7 @@ async function saveMember(){
   }
 
   if(res.ok) {
-    showMsg(memberEditingID === null ? "Member added" : "Member Updated", true)
+    showMsg(memberEditingID === null ? `${lastName.value} added` : `${data.lastName} Updated`, true)
     loadMembers()
     resetMemberForm()
   }else {
@@ -155,7 +156,7 @@ async function saveMembership(){
   }
 
   if(res.ok) {
-    showMsg(membershipEditingID === null ? "Membership added" : "Membership Updated", true)
+    showMsg(membershipEditingID === null ? `${planName.value} Added` : `${planName.value} Updated`, true)
     resetMembershipForm()
     loadMemberships()
   }else {
@@ -236,7 +237,7 @@ async function logAttendance(member){
   })
   
   if(res.ok) {
-    showMsg("Member's attendance logged", true)
+    showMsg(`${member.lastName} checked in`, true)
     loadMembers()
   }
 }
