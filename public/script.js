@@ -21,13 +21,16 @@ const membershipsTable = document.querySelector(".memberships.table")
 
 const msg = document.querySelector("#msg")
 
-async function loadMembers(){
+async function loadMembers(searchMembers){
   const resMembers = await fetch(memberAPI)
-  const members = await resMembers.json()
+  const loadedMembers = await resMembers.json()
   const resMemberships = await fetch(membershipAPI)
   const memberships = await resMemberships.json()
 
   membersTable.innerHTML = ""
+
+  const members = (searchMembers !== undefined) ? searchMembers : loadedMembers
+  console.log(members)
 
   members.forEach(member => {
     const oneDay = 1000 * 60 * 60 * 24
@@ -261,6 +264,8 @@ function showMsg(text, isGood){
   }
   msg.className = isGood ? "good" : "err"
 }
+
+
 
 const saveMemberButton = document.querySelector("#saveMember")
 const saveMembershipButton = document.querySelector("#saveMembership")
