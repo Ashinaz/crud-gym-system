@@ -86,7 +86,7 @@ a{
   color: #333333
 }
 
-.input.buttons button, .button.members, .button.memberships{
+.input.buttons button, .button.members, .button.memberships, .attendance.button{
   background-color: #54457F;
   border-color: rgb(255, 255, 255);
   border-radius: 6px;

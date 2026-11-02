@@ -52,10 +52,11 @@ async function loadMembers(){
       "<td>" + (member.attendance ?? 0) + "</td>" +
       "<td>" + status + "</td>" +
       "<td>" +
+        "<button class='attendance button'>Log</button>" +
         "<button class='edit button members'>Edit</button>" +
         "<button class='delete button members'>Delete</button>" +
       "</td>"
-
+    
     const editButton = tr.querySelector(".edit.button.members")
     const deleteButton = tr.querySelector(".delete.button.members")
 
