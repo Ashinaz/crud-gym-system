@@ -271,8 +271,9 @@ function showMsg(text, isGood){
   msg.className = isGood ? "good" : "err"
 }
 
-searchMembers.addEventListener("input", filterMembers())
-searchPlans.addEventListener("input", filterMemberships())
+searchMembers.addEventListener("input", function(e) {
+  console.log(e.target.value)
+})
 
 const saveMemberButton = document.querySelector("#saveMember")
 const saveMembershipButton = document.querySelector("#saveMembership")
