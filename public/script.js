@@ -184,6 +184,7 @@ async function saveMembership(){
   if(res.ok) {
     showMsg(membershipEditingID === null ? `${planName.value} Added` : `${planName.value} Updated`, true)
     resetMembershipForm()
+    resetMemberForm()
     loadMemberships()
     loadMembers()
   }else {
@@ -269,6 +270,7 @@ async function logAttendance(member){
     showMsg(`${member.lastName} checked in`, true)
     loadMembers()
   }
+  window.location = "#msg"
 }
 
 function showMsg(text, isGood){
