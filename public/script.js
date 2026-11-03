@@ -155,6 +155,7 @@ async function saveMember(){
       showMsg("Complete all fields.", false)
     }
   } else {showMsg("Complete all fields.", false)}
+  window.location = "#msg"
 }
 
 async function saveMembership(){
@@ -188,7 +189,7 @@ async function saveMembership(){
   }else {
     showMsg("Name, Duration, and Rate are required", false)
   }
-
+  window.location = "#msg"
 }
 
 async function deleteMember(id){
@@ -205,6 +206,7 @@ async function deletePlan(id){
 }
 
 function startEditMember(member){
+  window.location = "#member-title"
   memberEditingID = member._id
   lastName.value = member.lastName
   firstName.value = member.firstName
@@ -214,6 +216,7 @@ function startEditMember(member){
 }
 
 function startEditPlan(plan){
+  window.location = "#plan-title"
   membershipEditingID = plan._id
   planName.value = plan.planName
   rate.value = plan.rate
