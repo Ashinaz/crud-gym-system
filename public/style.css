@@ -239,3 +239,8 @@ footer{
   background-color: white;
   color: gray;
 }
+
+#all-membership-container, #all-membership-container{
+  display: flex;
+  gap: 30px;
+}
