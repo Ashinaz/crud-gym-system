@@ -204,6 +204,7 @@ async function deletePlan(id){
   showMsg("Membership Deleted", true)
   loadMemberships()
   loadMembers()
+  resetMemberForm()
 }
 
 function startEditMember(member){
