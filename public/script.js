@@ -80,7 +80,7 @@ async function loadMembers(searchMembers){
 
     attendanceButton.addEventListener("click", () => logAttendance(member))
     editButton.addEventListener("click", () => startEditMember(member))
-    deleteButton.addEventListener("click", () => deleteMember(member._id))
+    deleteButton.addEventListener("click", () => deleteMember(member))
 
     membersTable.appendChild(tr)
   })
@@ -117,7 +117,7 @@ async function loadMemberships(searchPlans){
     const deleteButton = tr.querySelector(".delete.button.memberships")
 
     editButton.addEventListener("click", () => startEditPlan(plans))
-    deleteButton.addEventListener("click", () => deletePlan(plans._id))
+    deleteButton.addEventListener("click", () => deletePlan(plans))
 
     membershipsTable.appendChild(tr)
   })
@@ -193,14 +193,14 @@ async function saveMembership(){
   window.location = "#msg"
 }
 
-async function deleteMember(id){
-  await fetch(memberAPI + "/" + id, {method: "DELETE"})
+async function deleteMember(member){
+  await fetch(memberAPI + "/" + member._id, {method: "DELETE"})
   showMsg("Member Deleted", true)
   loadMembers()
 }
 
-async function deletePlan(id){
-  await fetch(membershipAPI + "/" + id, {method: "DELETE"})
+async function deletePlan(plan){
+  await fetch(membershipAPI + "/" + plan._id , {method: "DELETE"})
   showMsg("Membership Deleted", true)
   loadMemberships()
   loadMembers()
