@@ -194,17 +194,23 @@ async function saveMembership(){
 }
 
 async function deleteMember(member){
-  await fetch(memberAPI + "/" + member._id, {method: "DELETE"})
-  showMsg("Member Deleted", true)
-  loadMembers()
+  const confirmDelete = prompt(`Enter "${(member.lastName).toUpperCase()}" to permanently delete member.`)
+  if(confirmDelete === (member.lastName).toUpperCase()) {
+    await fetch(memberAPI + "/" + member._id, {method: "DELETE"})
+    showMsg("Member Deleted", true)
+    loadMembers()
+  }else {alert(`Deleting member "${member.lastName}" has been canceled.`)}
 }
 
 async function deletePlan(plan){
-  await fetch(membershipAPI + "/" + plan._id , {method: "DELETE"})
-  showMsg("Membership Deleted", true)
-  loadMemberships()
-  loadMembers()
-  resetMemberForm()
+  const confirmDelete = prompt(`Enter "${(plan.planName).toUpperCase()}" to permanently delete membership plan.`)
+  if(confirmDelete === (plan.planName).toUpperCase()) {
+    await fetch(membershipAPI + "/" + plan._id , {method: "DELETE"})
+    showMsg("Membership Deleted", true)
+    loadMemberships()
+    loadMembers()
+    resetMemberForm()
+  }else {alert(`Deleting membership plan "${plan.planName}" has been canceled.`)}
 }
 
 function startEditMember(member){
